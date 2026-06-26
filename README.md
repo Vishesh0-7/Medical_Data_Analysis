@@ -85,6 +85,15 @@ medicare-analysis/
 ```
 
 ---
+## 📂 Dataset
+
+The dataset used in this project is publicly available from the **Centers for Medicare & Medicaid Services (CMS)**.
+
+**Download the dataset here:** [CMS Medicare Physician & Other Practitioners by Provider and Service (2013–2024)](<https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service>)
+
+After downloading, place all yearly CSV files in the `data/raw/` directory before running the ETL pipeline.
+
+---
 
 ## 📊 Analytics Pipeline
 
