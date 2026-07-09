@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: medicare_provider_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: medicare_provider_analytics
+      POSTGRES_USER: medicare_user
+      POSTGRES_PASSWORD: medicare_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./sql/views.sql:/docker-entrypoint-initdb.d/02_views.sql:ro
+
+volumes:
+  postgres_data:
